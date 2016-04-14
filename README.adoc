@@ -1,0 +1,28 @@
+Narada plugin: Go service
+=========================
+
+This repo contains extra files needed to add Go service for
+https://github.com/powerman/Narada[Narada] projects.
+
+There are different sets of files available in different branches:
+
+master:: plugin files which you should merge into your project
+
+doc:: (this branch) no plugin files, only documentation about this repo
+
+
+== Install
+
+Just merge this repo into your project's repo:
+
+```
+git remote add narada-plugin-go-service -t master -m master \
+    -f https://github.com/powerman/narada-plugin-go-service.git
+git merge narada-plugin-go-service
+```
+
+
+== Documentation
+
+Documentation is in your project's directory, see
+https://github.com/powerman/narada-plugin-go-service/blob/master/doc/narada-plugin-go-service.adoc[doc/narada-plugin-go-service.adoc].
