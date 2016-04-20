@@ -15,11 +15,19 @@ doc:: (this branch) no plugin files, only documentation about this repo
 
 Just merge this repo into your project's repo:
 
-```
+[source,sh]
+----
 git remote add narada-plugin-go-service -t master -m master \
     -f https://github.com/powerman/narada-plugin-go-service.git
 git merge narada-plugin-go-service
-```
+----
+
+Then replace relative imports with absolute:
+
+[source,sh]
+----
+perl -i -pe 's{"([.][.]/)+}{"'$(dirname $(go list ./cfg))'/}g' $(find -name '*.go')
+----
 
 
 == Documentation
